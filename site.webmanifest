@@ -1,0 +1,22 @@
+{
+  "name": "Fika Studio | 피카 스튜디오",
+  "short_name": "Fika Studio",
+  "description": "Swedish fika culture meets Seoul. 스웨덴의 피카 문화가 서울에 찾아옵니다.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F9F6F2",
+  "theme_color": "#4A3F35",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

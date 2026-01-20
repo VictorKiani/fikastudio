@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fika Studio | 피카 스튜디오 - Swedish Coffee Culture in Korea</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Fika Studio brings authentic Swedish fika culture to South Korea. Experience the art of slowing down with quality coffee and meaningful moments. 스웨덴 피카 문화를 한국에서 경험하세요.">
+    <meta name="keywords" content="fika, 피카, Swedish coffee, 스웨덴 커피, Seoul cafe, 서울 카페, fika studio, 피카 스튜디오, Scandinavian, 스칸디나비안, coffee culture, 커피 문화, Korea">
+    <meta name="author" content="Fika Studio">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Korean, English">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fikastudio.kr">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fikastudio.kr">
+    <meta property="og:title" content="Fika Studio | 피카 스튜디오 - Swedish Coffee Culture in Korea">
+    <meta property="og:description" content="Swedish fika culture meets Seoul. A moment to pause, connect, and savor. 스웨덴의 피카 문화가 서울에 찾아옵니다.">
+    <meta property="og:image" content="https://fikastudio.kr/og-image.jpg">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:site_name" content="Fika Studio">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://fikastudio.kr">
+    <meta name="twitter:title" content="Fika Studio | 피카 스튜디오">
+    <meta name="twitter:description" content="Swedish fika culture meets Seoul. 스웨덴의 피카 문화가 서울에 찾아옵니다.">
+    <meta name="twitter:image" content="https://fikastudio.kr/og-image.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#4A3F35">
+    <meta name="msapplication-TileColor" content="#4A3F35">
+
+    <!-- Sitemap reference -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- Alternate language/region -->
+    <link rel="alternate" hreflang="ko" href="https://fikastudio.kr/">
+    <link rel="alternate" hreflang="x-default" href="https://fikastudio.kr/">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Fika Studio",
+        "alternateName": "피카 스튜디오",
+        "url": "https://fikastudio.kr",
+        "description": "Swedish fika culture meets Seoul. A moment to pause, connect, and savor. 스웨덴의 피카 문화가 서울에 찾아옵니다.",
+        "logo": "https://fikastudio.kr/og-image.jpg",
+        "areaServed": {
+            "@type": "Country",
+            "name": "South Korea"
+        },
+        "knowsLanguage": ["ko", "en"]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --warm-cream: #F9F6F2;
+            --soft-beige: #E8E2D9;
+            --warm-brown: #8B7355;
+            --deep-brown: #4A3F35;
+            --muted-sage: #9CAF94;
+            --terracotta: #C4785A;
+            --dusty-rose: #D4A5A5;
+            --text-primary: #2C2825;
+            --text-secondary: #6B635B;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--warm-cream);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Subtle grain texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        /* Artistic brush strokes */
+        .brush-stroke {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .brush-stroke-1 {
+            top: 8%;
+            right: 5%;
+            width: 280px;
+            height: auto;
+            opacity: 0.6;
+            transform: rotate(-15deg);
+        }
+
+        .brush-stroke-2 {
+            bottom: 12%;
+            left: 3%;
+            width: 220px;
+            height: auto;
+            opacity: 0.5;
+            transform: rotate(10deg) scaleX(-1);
+        }
+
+        .brush-stroke-3 {
+            top: 45%;
+            left: 8%;
+            width: 120px;
+            height: auto;
+            opacity: 0.35;
+            transform: rotate(-25deg);
+        }
+
+        /* Decorative elements */
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+
+        .deco-circle-1 {
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, var(--soft-beige) 0%, transparent 70%);
+            top: -100px;
+            right: -100px;
+        }
+
+        .deco-circle-2 {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(315deg, var(--muted-sage) 0%, transparent 70%);
+            bottom: 10%;
+            left: -50px;
+            opacity: 0.2;
+        }
+
+        .content {
+            text-align: center;
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            margin-bottom: 3rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--deep-brown);
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+        }
+
+        .divider {
+            width: 40px;
+            height: 1px;
+            background-color: var(--warm-brown);
+            margin: 2.5rem auto;
+            opacity: 0.5;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        h1 .korean {
+            display: block;
+            font-size: 0.5em;
+            color: var(--text-secondary);
+            margin-top: 0.75rem;
+            font-weight: 400;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .tagline .highlight {
+            color: var(--warm-brown);
+            font-weight: 400;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .status-text {
+            display: inline-block;
+            min-width: 120px;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .status-text.fade-out {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+
+        .status-text.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background-color: var(--muted-sage);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Footer */
+        footer {
+            padding: 2rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .domains {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .domains span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.05em;
+            opacity: 0.6;
+        }
+
+        .copyright {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes brushReveal {
+            from {
+                opacity: 0;
+                transform: translateX(-30px) rotate(var(--rotation, 0deg));
+            }
+            to {
+                opacity: var(--final-opacity, 0.6);
+                transform: translateX(0) rotate(var(--rotation, 0deg));
+            }
+        }
+
+        .content > * {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+
+        .logo { animation-delay: 0.1s; }
+        .divider { animation-delay: 0.2s; }
+        h1 { animation-delay: 0.3s; }
+        .tagline { animation-delay: 0.4s; }
+        .status { animation-delay: 0.5s; }
+
+        .brush-stroke-1 {
+            --rotation: -15deg;
+            --final-opacity: 0.6;
+            animation: brushReveal 1.2s ease forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+
+        .brush-stroke-2 {
+            --rotation: 10deg;
+            --final-opacity: 0.5;
+            animation: brushReveal 1.2s ease forwards;
+            animation-delay: 0.8s;
+            opacity: 0;
+        }
+
+        .brush-stroke-3 {
+            --rotation: -25deg;
+            --final-opacity: 0.35;
+            animation: brushReveal 1.2s ease forwards;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .brush-stroke-1 {
+                width: 180px;
+                top: 5%;
+                right: -20px;
+            }
+
+            .brush-stroke-2 {
+                width: 150px;
+                bottom: 8%;
+                left: -30px;
+            }
+
+            .brush-stroke-3 {
+                display: none;
+            }
+
+            .domains {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brush-stroke-1 {
+                width: 140px;
+            }
+
+            .brush-stroke-2 {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Artistic brush strokes -->
+    <svg class="brush-stroke brush-stroke-1" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 35C15 25 35 15 60 18C85 21 95 35 120 32C145 29 160 15 180 20C190 22 198 28 195 35C192 42 175 48 150 45C125 42 110 52 80 48C50 44 25 55 10 48C0 43 -5 45 5 35Z" fill="#C4785A" fill-opacity="0.7"/>
+        <path d="M20 30C35 22 55 28 75 25C95 22 105 32 130 28C155 24 170 35 185 30" stroke="#D4A5A5" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </svg>
+
+    <svg class="brush-stroke brush-stroke-2" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 28C25 18 50 22 75 20C100 18 115 28 140 25C155 23 170 30 175 35C178 40 165 45 145 42C125 39 100 45 70 40C40 35 15 42 8 35C2 28 -5 38 10 28Z" fill="#9CAF94" fill-opacity="0.6"/>
+        <path d="M15 32C40 24 65 30 90 27C115 24 135 32 160 28" stroke="#8B7355" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+    </svg>
+
+    <svg class="brush-stroke brush-stroke-3" viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 22C15 15 30 18 50 16C70 14 80 22 92 20C97 19 98 24 93 27C85 32 65 30 45 32C25 34 10 28 5 25C0 22 -5 29 5 22Z" fill="#D4A5A5" fill-opacity="0.5"/>
+    </svg>
+
+    <div class="deco-circle deco-circle-1"></div>
+    <div class="deco-circle deco-circle-2"></div>
+
+    <main class="container">
+        <article class="content">
+            <header class="logo">
+                <h2 class="logo-text">Fika Studio</h2>
+                <p class="logo-sub">피카 스튜디오</p>
+            </header>
+
+            <div class="divider" role="presentation"></div>
+
+            <h1>
+                Something warm is brewing
+                <span class="korean">따뜻한 무언가가 준비되고 있습니다</span>
+            </h1>
+
+            <p class="tagline">
+                Swedish <span class="highlight">fika</span> culture meets Seoul.<br>
+                A moment to pause, connect, and savor.<br>
+                스웨덴의 피카 문화가 서울에 찾아옵니다.
+            </p>
+
+            <div class="status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span class="status-text">Coming Soon</span>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <nav class="domains" aria-label="Our domains">
+            <span>fikastudio.kr</span>
+            <span>fikastudio.co.kr</span>
+        </nav>
+        <p class="copyright">&copy; 2026 Fika Studio. All rights reserved.</p>
+    </footer>
+    <script>
+        const statusWords = [
+            'Coming Soon',
+            'Brewing',
+            'Pouring',
+            'Steeping',
+            'Warming Up',
+            'Percolating',
+            'Simmering',
+            'Crafting',
+            'Preparing',
+            'Blending',
+            'Infusing',
+            'Roasting',
+            'Savoring',
+            'Awakening',
+            'Unfolding'
+        ];
+
+        let currentIndex = 0;
+        const statusText = document.querySelector('.status-text');
+
+        function cycleWords() {
+            statusText.classList.add('fade-out');
+            statusText.classList.remove('fade-in');
+
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % statusWords.length;
+                statusText.textContent = statusWords[currentIndex];
+                statusText.classList.remove('fade-out');
+                statusText.classList.add('fade-in');
+            }, 400);
+        }
+
+        // Start cycling after initial load
+        setTimeout(() => {
+            setInterval(cycleWords, 2500);
+        }, 2000);
+    </script>
+</body>
+</html>

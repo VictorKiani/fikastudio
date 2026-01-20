@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OG Image Template - Screenshot this at 1200x630</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 1200px;
+            height: 630px;
+            font-family: 'Inter', 'Noto Sans KR', sans-serif;
+            background-color: #F9F6F2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .grain {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+        .brush-1 {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            width: 350px;
+            opacity: 0.5;
+        }
+        .brush-2 {
+            position: absolute;
+            bottom: 60px;
+            left: 40px;
+            width: 280px;
+            opacity: 0.4;
+            transform: scaleX(-1);
+        }
+        .content {
+            text-align: center;
+            z-index: 1;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 500;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #4A3F35;
+            margin-bottom: 12px;
+        }
+        .logo-sub {
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            color: #6B635B;
+            margin-bottom: 50px;
+        }
+        .divider {
+            width: 60px;
+            height: 1px;
+            background: #8B7355;
+            margin: 0 auto 50px;
+            opacity: 0.5;
+        }
+        h1 {
+            font-size: 52px;
+            font-weight: 300;
+            color: #2C2825;
+            margin-bottom: 20px;
+        }
+        .korean {
+            font-size: 22px;
+            color: #6B635B;
+            font-weight: 400;
+        }
+        .tagline {
+            font-size: 20px;
+            color: #6B635B;
+            margin-top: 40px;
+            font-weight: 300;
+        }
+        .tagline .highlight {
+            color: #8B7355;
+            font-weight: 400;
+        }
+        .domain {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            font-size: 16px;
+            color: #8B7355;
+            letter-spacing: 0.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <svg class="brush-1" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 35C15 25 35 15 60 18C85 21 95 35 120 32C145 29 160 15 180 20C190 22 198 28 195 35C192 42 175 48 150 45C125 42 110 52 80 48C50 44 25 55 10 48C0 43 -5 45 5 35Z" fill="#C4785A" fill-opacity="0.7"/>
+        <path d="M20 30C35 22 55 28 75 25C95 22 105 32 130 28C155 24 170 35 185 30" stroke="#D4A5A5" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+    </svg>
+
+    <svg class="brush-2" viewBox="0 0 180 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 28C25 18 50 22 75 20C100 18 115 28 140 25C155 23 170 30 175 35C178 40 165 45 145 42C125 39 100 45 70 40C40 35 15 42 8 35C2 28 -5 38 10 28Z" fill="#9CAF94" fill-opacity="0.6"/>
+        <path d="M15 32C40 24 65 30 90 27C115 24 135 32 160 28" stroke="#8B7355" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+    </svg>
+
+    <div class="content">
+        <div class="logo">Fika Studio</div>
+        <div class="logo-sub">피카 스튜디오</div>
+        <div class="divider"></div>
+        <h1>Something warm is brewing</h1>
+        <div class="korean">따뜻한 무언가가 준비되고 있습니다</div>
+        <div class="tagline">Swedish <span class="highlight">fika</span> culture meets Seoul</div>
+    </div>
+
+    <div class="domain">fikastudio.kr</div>
+</body>
+</html>
