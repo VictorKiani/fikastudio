@@ -220,19 +220,11 @@
         }
 
         h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(1.75rem, 5vw, 3rem);
             font-weight: 300;
             line-height: 1.3;
             margin-bottom: 1.5rem;
             color: var(--text-primary);
-        }
-
-        h1 .korean {
-            display: block;
-            font-size: 0.5em;
-            color: var(--text-secondary);
-            margin-top: 0.75rem;
-            font-weight: 400;
         }
 
         .tagline {
@@ -374,16 +366,67 @@
             opacity: 0;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
+        /* Responsive - Tablets */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 1.5rem;
+            }
+
             .brush-stroke-1 {
+                width: 220px;
+            }
+
+            .brush-stroke-2 {
                 width: 180px;
+            }
+
+            .deco-circle-1 {
+                width: 250px;
+                height: 250px;
+            }
+
+            .deco-circle-2 {
+                width: 160px;
+                height: 160px;
+            }
+        }
+
+        /* Responsive - Small tablets / Large phones */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.25rem;
+            }
+
+            .content {
+                max-width: 90%;
+            }
+
+            .logo-text {
+                font-size: 1.25rem;
+                letter-spacing: 0.2em;
+            }
+
+            .logo-sub {
+                font-size: 0.7rem;
+            }
+
+            .divider {
+                margin: 2rem auto;
+            }
+
+            .tagline {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+
+            .brush-stroke-1 {
+                width: 160px;
                 top: 5%;
                 right: -20px;
             }
 
             .brush-stroke-2 {
-                width: 150px;
+                width: 130px;
                 bottom: 8%;
                 left: -30px;
             }
@@ -392,18 +435,126 @@
                 display: none;
             }
 
+            .deco-circle-1 {
+                width: 200px;
+                height: 200px;
+                top: -80px;
+                right: -80px;
+            }
+
+            .deco-circle-2 {
+                width: 120px;
+                height: 120px;
+            }
+
             .domains {
                 gap: 1rem;
             }
+
+            footer {
+                padding: 1.5rem;
+            }
         }
 
+        /* Responsive - Phones */
         @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .content {
+                max-width: 95%;
+            }
+
+            .logo {
+                margin-bottom: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+                letter-spacing: 0.15em;
+            }
+
+            .logo-sub {
+                font-size: 0.65rem;
+            }
+
+            .divider {
+                width: 30px;
+                margin: 1.5rem auto;
+            }
+
+            .tagline {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+
+            .status {
+                font-size: 0.75rem;
+            }
+
             .brush-stroke-1 {
-                width: 140px;
+                width: 120px;
+                top: 3%;
+                right: -15px;
+                opacity: 0.5;
             }
 
             .brush-stroke-2 {
-                width: 120px;
+                width: 100px;
+                bottom: 5%;
+                left: -25px;
+                opacity: 0.4;
+            }
+
+            .deco-circle-1 {
+                width: 150px;
+                height: 150px;
+                top: -60px;
+                right: -60px;
+            }
+
+            .deco-circle-2 {
+                width: 80px;
+                height: 80px;
+                left: -30px;
+            }
+
+            .domains {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .domains span {
+                font-size: 0.75rem;
+            }
+
+            .copyright {
+                font-size: 0.7rem;
+            }
+
+            footer {
+                padding: 1rem;
+            }
+        }
+
+        /* Responsive - Very small phones */
+        @media (max-width: 360px) {
+            .logo-text {
+                font-size: 1rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .tagline {
+                font-size: 0.875rem;
+            }
+
+            .brush-stroke-1,
+            .brush-stroke-2 {
+                opacity: 0.3;
             }
         }
     </style>
@@ -436,10 +587,7 @@
 
             <div class="divider" role="presentation"></div>
 
-            <h1>
-                Something warm is brewing
-                <span class="korean">따뜻한 무언가가 준비되고 있습니다</span>
-            </h1>
+            <h1>Something warm is brewing</h1>
 
             <p class="tagline">
                 Swedish <span class="highlight">fika</span> culture meets Seoul.<br>
